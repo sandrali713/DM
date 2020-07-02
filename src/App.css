@@ -1,3 +1,67 @@
+html, #root{
+  height:100%;
+  width:100%;
+  display:flex;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,sans-serif;
+  height:100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  background-image: url("https://www.caycon.com/wp-content/uploads/2014/11/How-to-Spot-and-Avoid-Tech-Bubbles.jpg"); 
+  color: white;
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 25px;
+  letter-spacing: 3px;
+  font-family: montserrat;
+}
+
+h1  {
+  color:white;
+}
+
+footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255, .2);
+  padding: 8px;
+}
+
+.text-input {
+  flex: 1;
+  height: 25px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+.send-button {
+  margin-right: 8.5px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #E1A943;
+}
+
+
 .App {
   text-align: center;
 }
