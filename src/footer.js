@@ -1,11 +1,22 @@
 import React, {useState} from 'react'
-function Footer(){
+function Footer(props){
   const [text,setText] = useState('')
   return <footer class="footer">
-    <input class="text-input" value={text} 
+
+    <input className="text-input" value={text} 
       onChange={e=> setText(e.target.value)}
+      onKeyPress={e=> {
+        if(e.key==='Enter') {
+          props.onSend(text)
+          setText('')
+        }
+      }}
     />
-    <button class="send-button">
+    <button className="send-button"
+      onClick={()=> {
+        props.onSend(text)
+        setText('')
+      }}>
       ↑
     </button>
   </footer>
