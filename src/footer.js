@@ -6,7 +6,7 @@ function Footer(props){
     <input className="text-input" value={text} 
       onChange={e=> setText(e.target.value)}
       onKeyPress={e=> {
-        if(e.key==='Enter') {
+        if(e.key==='Enter' && text) {
           props.onSend(text)
           setText('')
         }
@@ -14,8 +14,10 @@ function Footer(props){
     />
     <button className="send-button"
       onClick={()=> {
-        props.onSend(text)
-        setText('')
+        if(text) {
+          props.onSend(text)
+          setText('')
+        }
       }}>
       ↑
     </button>
