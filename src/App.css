@@ -23,15 +23,32 @@ body{
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px;
   font-size: 25px;
   letter-spacing: 3px;
   font-family: montserrat;
 }
 
+.msg-name {
+  padding: 2px 15px;
+}
+
+.set-name {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  width: 100px;
+  height: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
 h1  {
   color:white;
+  text-align: center;
 }
 
 footer {

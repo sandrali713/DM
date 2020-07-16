@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import Footer from './footer'
 import Message from './message'
@@ -19,18 +19,24 @@ function App() {
 function Room(props) {
   const room = props.match.params.room
   const {messages, send} = useDatu(room)
+  const [name,setName] = useState('')
+
   return (
     <main className="App">
     <header>
         <span class = "title">Chatter</span>
-        <Namepicker/>
+        <Namepicker saveName={setName}/>
     </header>
     <div className="messages">
-      {messages.map((m,i)=> <Message key={i} text={m.text} />)}
+      {messages.map((m,i)=> {
+        return <Message key={i} text={m.text} 
+          name={m.name} isMe={m.name===name}
+        />
+      })}
     </div>
 
     <Footer
-        onSend={(text)=> send({text, room})} 
+        onSend={(text)=> send({text, room, name})} 
     />
       
     </main>

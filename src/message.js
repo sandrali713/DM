@@ -1,9 +1,16 @@
 import React from 'react';
 
 function Message(props){
-  return <div className="msg">
-    <div className="msg-bubble">
-      {props.text}
+  return <div className="msg" style={{
+    flexDirection: props.isMe ? 'row-reverse' : 'row'
+  }}>
+    <div>
+      <div className="msg-name">
+        {props.name || 'Unknown'}
+      </div>
+      <div className="msg-bubble">
+        {props.text}
+      </div>
     </div>
   </div>
 }

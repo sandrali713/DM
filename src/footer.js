@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
+
 function Footer(props){
   const [text,setText] = useState('')
-  return <footer class="footer">
+  return <footer className="footer">
 
     <input className="text-input" value={text} 
       onChange={e=> setText(e.target.value)}
