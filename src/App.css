@@ -34,6 +34,10 @@ header {
   padding: 2px 15px;
 }
 
+.msg {
+  display: flex;
+}
+
 .set-name {
   display: flex;
   align-items: center;
